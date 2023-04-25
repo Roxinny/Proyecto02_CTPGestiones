@@ -1,0 +1,22 @@
+from patrondiseño import Singleton
+from clases import MyApplication
+import tkinter as tk
+from clases import Acceso
+
+
+
+if __name__ == '__main__':
+    acceso = Acceso()
+    acceso.root.mainloop()
+
+
+
+root1 = tk.Tk()
+app1 = Singleton.get_instance(root1)
+
+root2 = tk.Tk()
+app2 = Singleton.get_instance(root2)
+
+# comprobar si son la misma instancia
+print(app1 == app2)  # True
+
